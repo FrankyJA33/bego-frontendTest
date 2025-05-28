@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: 'Open Sans', sans-serif;
+  color: #EDEDED;
+  background-color: rgba(8, 12, 15, 1);
+}
+
+@layer components {
+  h1 {
+    @apply font-semibold leading-none tracking-normal align-middle
+  }
+
+  h2 {
+    @apply font-semibold leading-1 tracking-normal align-middle
+  }
+}
+
+.gradient-border {
+  background: linear-gradient(66deg, rgba(8, 12, 15, 0.5) 5%, rgba(85, 85, 85, 0) 100%);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(10px);
+  /* For Safari */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: none;
+  /* Optional: Light border for glass effect */
+}
+
+
+.button-card {
+  background: rgba(255, 238, 0, 1);
+  color: rgba(8, 11, 17, 1);
+  backdrop-filter: blur(70px);
+  box-shadow: -4px -4px 4px 0px rgba(194, 181, 0, 1) inset;
+}
+
+.barra {
+  background: linear-gradient(180deg, #D9D9D9 0%, #0F1315 100%);
+}
+
+button:disabled {
+  cursor: none;
+  background: transparent;
+  box-shadow: none;
+  color: #d9d9d93e;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
